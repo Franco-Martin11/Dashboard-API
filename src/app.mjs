@@ -1,6 +1,5 @@
-// const bodyParser = require('body-parser');
-// const express = require('express');
 import express from "express";
+import deportes from './schemas/index.mjs'
 import bodyParser from "body-parser";
 const app = express();
 
@@ -19,7 +18,7 @@ let usuarios = [
 
 app.get("/project", (req, res) => {
   setTimeout(() => {
-    res.json(usuarios);
+    res.json(deportes);
   }, 3000);
 });
 
