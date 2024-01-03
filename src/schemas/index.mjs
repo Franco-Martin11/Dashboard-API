@@ -1,6 +1,8 @@
+import uuidGenerator from "../utils/uuidGenerator.mjs";
+
 const deportes = [
   {
-    id: 1,
+    id: uuidGenerator(),
     deporte: "Fútbol",
     paragraph:
       "El fútbol es un deporte de equipo que se juega con un balón en un campo rectangular. El objetivo es marcar goles en la portería contraria.",
@@ -14,7 +16,7 @@ const deportes = [
     },
   },
   {
-    id: 2,
+    id: uuidGenerator(),
     deporte: "Baloncesto",
     paragraph:
       "El baloncesto es un deporte de equipo que se juega en una cancha rectangular. El objetivo es anotar puntos lanzando una pelota a través del aro del equipo contrario.",
@@ -28,7 +30,7 @@ const deportes = [
     },
   },
   {
-    id: 3,
+    id: uuidGenerator(),
     deporte: "Tenis",
     paragraph:
       "El tenis es un deporte individual o de parejas que se juega con raquetas y una pelota en una pista rectangular. El objetivo es hacer que la pelota pase por encima de la red y caiga dentro del campo contrario.",
@@ -42,7 +44,7 @@ const deportes = [
     },
   },
   {
-    id: 4,
+    id: uuidGenerator(),
     deporte: "Atletismo",
     paragraph:
       "El atletismo es un deporte que incluye una variedad de disciplinas individuales, como carreras, saltos y lanzamientos. Los atletas compiten en diferentes pruebas para lograr la máxima velocidad, resistencia, altura o distancia.",
@@ -60,7 +62,7 @@ const deportes = [
     },
   },
   {
-    id: 5,
+    id: uuidGenerator(),
     deporte: "Natación",
     paragraph:
       "La natación es un deporte individual o de equipo que se realiza en el agua. Los nadadores compiten en diferentes estilos de natación, como estilo libre, espalda, pecho y mariposa, con el objetivo de completar la distancia más rápido.",
@@ -80,7 +82,7 @@ const deportes = [
     },
   },
   {
-    id: 6,
+    id: uuidGenerator(),
     deporte: "Voleibol",
     paragraph:
       "El voleibol es un deporte de equipo que se juega en una cancha dividida por una red. El objetivo es pasar la pelota por encima de la red y hacer que toque el suelo en el campo contrario.",

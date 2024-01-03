@@ -1,7 +1,11 @@
 import express from "express";
-import deportes from './schemas/index.mjs'
 import bodyParser from "body-parser";
+import DB from "./db/DB.mjs";
+
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
@@ -10,16 +14,13 @@ app.use((req, res, next) => {
   next();
 });
 
-let usuarios = [
-  { id: 1, nombre: "Juan", edad: 25 },
-  { id: 2, nombre: "María", edad: 30 },
-  { id: 3, nombre: "Pedro", edad: 28 },
-];
-
 app.get("/project", (req, res) => {
-  setTimeout(() => {
-    res.json(deportes);
-  }, 3000);
+  res.json(DB);
+});
+app.post("/updateDB", (req, res) => {
+  const { body } = req;
+  const dataDB = { transaction: [...DB.transaction, body] };
+  res.json(dataDB);
 });
 
 app.listen(3000, () => {
